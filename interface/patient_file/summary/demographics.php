@@ -782,7 +782,11 @@ $menu_restrictions = $menuPatient->getMenu();
                 }
             }
             ?>
-        </td>
+       |
+        
+<a href="../webcam/index.php?active=all" onclick='top.restoreSession()'>
+            <?php echo htmlspecialchars(xl('Take Patient Photo'), ENT_NOQUOTES); ?></a>
+          </td>
     </tr>
 </table> <!-- end header -->
 
