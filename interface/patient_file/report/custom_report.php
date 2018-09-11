@@ -275,7 +275,6 @@ echo "</td>";?>
 
 
 <?php
-
 $res = sqlStatement("SELECT fname,mname,lname,phone_home,DOB, patient_data.pid,
       snapshot.Image FROM patient_data
       left join snapshot on snapshot.pid=patient_data.pid WHERE patient_data.pid = $pid");
@@ -509,7 +508,7 @@ foreach ($ar as $key => $val) {
         } elseif ($val == "insurance") {
             echo "<hr />";
             echo "<div class='text insurance'>";
-            echo "<h1>".xl('Agent').":</h1>";
+            echo "<h1>".xl('insurance').":</h1>";
             print "<br><span class=bold>".xl('').":</span><br>";
             printRecDataOne($insurance_data_array, getRecInsuranceData($pid, "primary"), $N);
 			
